@@ -37,7 +37,7 @@ import { UnidentifiedPeopleComponent } from './unidentified-people/unidentified-
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    AgmCoreModule.forRoot({apiKey : "AIzaSyAT0-rkxdnGzSCRIK95DPfs7TkOdNvvZjw"}),
+    AgmCoreModule.forRoot({apiKey : "API KEY HERE"}),
     AppRoutingModule
     // NgbModule
   ],
