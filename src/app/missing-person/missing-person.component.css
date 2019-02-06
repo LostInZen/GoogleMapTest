@@ -1,0 +1,15 @@
+.personImage{
+    width: 50%;
+}
+.personContent{
+    text-align: left;
+
+}
+.personContent label{
+    font-weight:600;
+    margin-bottom:5px!important;
+}
+p{
+    margin-bottom:5px!important;
+    font-size: 20px;
+}

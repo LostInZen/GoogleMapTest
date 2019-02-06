@@ -1,0 +1,14 @@
+<table class="table col-sm-12">
+  <thead><tr><th>Ad To List</th><th scope="col">date</th><th scope="col">age</th><th scope="col">sex</th><th scope="col">name</th><th>select</th></tr></thead>
+  <tbody><tr *ngFor="let perp of People" scope="row"><td><input type="checkbox" placeholder="name"/></td><td>{{perp.DateLastContact | date}}</td><td>{{perp.MissingAge}}</td><td>{{perp.Sex}}</td><td><a routerLink="/missing-person/{{perp.id}}">{{perp.FirstName + " " + perp.LastName}}</a></td><td><div class="selectButton" (click)="DisplayInformation(perp.id)">Select</div> </td></tr></tbody>
+</table>
+<div *ngIf="SelectedPerson" class='col-sm-12 col-md-12 SelectedPerson'>
+<img class='personPhoto' src="{{selectedPerson.img}}"/>
+<div class='col-sm-12 col-md-8 personDetails'>
+<p>Last Seen: {{selectedPerson.DateLastContact | date}}</p>
+<p>Location: {{selectedPerson.City}} , {{selectedPerson.State}}</p>
+<p>Case Number: {{selectedPerson.CaseNumber}}</p>
+<p>Race: {{selectedPerson.Race}}</p>
+<p>Date Modified: {{selectedPerson.DateModified | date}}</p>
+</div>
+</div>

@@ -1,0 +1,20 @@
+
+<div class="col-sm-12">Search By City: <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+<input type="button" value="Map Results" />
+</div>
+<div class="col-sm-12">
+<p>found {{(missingPeople$ | async)?.length}} results.</p>
+<table class="table col-sm-12">
+    <thead><tr><th>Ad To List</th><th scope="col">date</th><th scope="col">age</th><th scope="col">sex</th><th scope="col">name</th><th>select</th></tr></thead>
+    <tbody>
+      <tr *ngFor="let perp of missingPeople$ | async" scope="row">
+        <td><input type="checkbox" placeholder="name"/></td>
+        <td>{{perp.DateLastContact | date}}</td>
+        <td>{{perp.MissingAge}}</td>
+        <td>{{perp.Sex}}</td>
+        <td><a routerLink="/missing-person/{{perp.id}}">{{perp.FirstName + " " + perp.LastName}}</a></td>
+        <td><div class="selectButton" (click)="DisplayInformation(perp.id)">Select</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

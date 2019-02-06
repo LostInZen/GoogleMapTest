@@ -1,0 +1,25 @@
+<div class="col-sm-12">
+  <h2>Missing Persons Report</h2>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <img class="personImage" src="{{unidentified.img}}"/>
+    </div>
+    <div class="col-sm-12 col-md-6 personContent">
+      <p><label>Date Found:</label> {{unidentified.DateFound | date}}</p>
+      <p><label>Location:</label> {{unidentified.City}}, {{unidentified.State}}</p>
+      <p><label>County:</label> {{unidentified.County}}</p>
+      <div><label>Details:</label> 
+        <ul>
+          <li>Age (?): {{unidentified.AgeFrom}} - {{unidentified.AgeTo}}</li>
+          <li>Sex: {{unidentified.Sex}}</li>
+          <li>Race: {{unidentified.RaceEthnicity}}</li>
+          <li>Profile Last Updated:  {{unidentified.DateModified}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-sm-12">
+
+<app-map-pointer class="col-md-6 col-sm-12" City="{{unidentified.City}}" State="{{unidentified.State}}" Person="{{unidentified}}"></app-map-pointer>
+</div>

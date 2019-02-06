@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container" style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <nav>
+    <a routerLink="/dashboard">Dashboard | </a>
+    <a routerLink="/List">List | </a>
+    <a routerLink="/missing-person/1">Top Person</a>
+  </nav>
+  <router-outlet class="row"></router-outlet>
+  
+</div>
+<app-message-handler class="row"></app-message-handler>
